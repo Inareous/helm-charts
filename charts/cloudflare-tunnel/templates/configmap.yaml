@@ -5,6 +5,8 @@ metadata:
   name: {{ include "cloudflare-tunnel.fullname" . }}
 data:
   config.yaml: |
+    # Token - For old tunnel
+    token: {{ .Values.cloudflare.token }}
     # Name of the tunnel you want to run
     tunnel: {{ .Values.cloudflare.tunnelName }}
     # The location of the secret containing the tunnel credentials
